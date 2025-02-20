@@ -41,6 +41,10 @@ export class GiftsService {
     if(!localStorage.getItem('history')) return;
 
     this._tagHistory = JSON.parse(localStorage.getItem('history')!);
+
+    if(this._tagHistory.length === 0) return;
+
+    this.searchTag(this._tagHistory[0]);
   }
 
   public searchTag(tag:string):void{

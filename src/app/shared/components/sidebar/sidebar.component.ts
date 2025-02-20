@@ -9,9 +9,7 @@ import { GiftsService } from '../../../gifts/services/gifts.service';
 })
 export class SidebarComponent {
 
-  constructor(private giftsService:GiftsService){
-    giftsService.searchTag(giftsService.tagHistory[0]);
-  }
+  constructor(private giftsService:GiftsService){}
 
   get _tags(){
     return this.giftsService.tagHistory;
